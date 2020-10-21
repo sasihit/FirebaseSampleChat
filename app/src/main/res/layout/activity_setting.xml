@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SettingActivity">
+
+    <include
+        android:id="@+id/settings_toolbar"
+        layout="@layout/app_bar_layout"></include>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/set_profile_image"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/profile_image"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/set_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/inputs"
+        android:drawableLeft="@drawable/edit_profile"
+        android:gravity="center"
+        android:hint="username"
+        android:inputType="textMultiLine"
+        android:padding="6dp"
+
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/set_profile_image" />
+
+    <EditText
+        android:id="@+id/set_profile_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/inputs"
+        android:drawableLeft="@drawable/edit_status"
+        android:gravity="center"
+        android:hint="hey, i am available now."
+        android:inputType="textMultiLine"
+        android:padding="6dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/set_user_name" />
+
+
+    <Button
+        android:id="@+id/update_settings_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/buttons"
+        android:gravity="center"
+        android:inputType="textMultiLine"
+        android:padding="6dp"
+        android:text="Update"
+
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/set_profile_status" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
